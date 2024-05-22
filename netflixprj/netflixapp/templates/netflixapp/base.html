@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="{% static 'assets/style.css' %}">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</head>
+<body class="bg-black text-gray-100">
+    <nav class="flex justify-between items-center py-3 px-4 fixed w-full z-50">
+        <div class="w-6/12">
+            <img src="{% static 'assets/netflix.png' %}" alt="logo" class="w-5/12 md:w-2/12">
+        </div>
+
+        <div>
+            <a href="login.html" class='bg-primary_red py-1 px-3 text-white md:text-lg rounded-md'>
+                Sign In 
+            </a>
+        </div>
+    </nav>
+    {% block content %}
+
+    {% endblock content %}
+    <section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+        <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
+            <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+                Create profiles for kids.
+            </h2>
+            <h5 class="md:text-xl text-lg">
+                Send kids on adventures with their favorite characters in a space made just for them—free with your membership.
+            </h5>
+        </div>
+        <div class='md:w-1/2 flex justify-center items-center'>
+            <img src="{% static 'assets/netflix_kid.png' %}" class="w-8/12" alt="">
+        </div>
+    </section>
+    <footer class=" px-5 py-10 ">
+        <ul class="flex justify-between items-center">
+            
+            <li>&copy; All Right Reserved | 2022</li>
+            <li> Netflix Clone</li>
+            <li>By: Destiny Franks - Desphixs</li>
+        </ul>
+    </footer>
+</body>
+</html>
